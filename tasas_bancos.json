@@ -1,0 +1,464 @@
+[
+  {
+    "banco": "BBVA (Francés)",
+    "logo": "./img/bbva.png",
+    "link": "https://www.bbva.com.ar",
+    "destacado": true,
+    "tasas": {
+      "tradicional": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 1000,
+          "tna": 26.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 1000,
+          "tna": 24.0
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 269,
+          "min_monto": 1000,
+          "tna": 24.0
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 365,
+          "min_monto": 1000,
+          "tna": 26.0
+        },
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 10000000,
+          "tna": 27.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 269,
+          "min_monto": 10000000,
+          "tna": 25.0
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 365,
+          "min_monto": 10000000,
+          "tna": 27.0
+        },
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 30000000,
+          "tna": 28.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 269,
+          "min_monto": 30000000,
+          "tna": 26.0
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 365,
+          "min_monto": 30000000,
+          "tna": 28.0
+        }
+      ],
+      "dolares": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 1000,
+          "tna": 1.25
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 1000,
+          "tna": 1.5
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 119,
+          "min_monto": 1000,
+          "tna": 2.25
+        },
+        {
+          "min_dias": 120,
+          "max_dias": 179,
+          "min_monto": 1000,
+          "tna": 2.5
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 269,
+          "min_monto": 1000,
+          "tna": 3.2
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 365,
+          "min_monto": 1000,
+          "tna": 5.0
+        }
+      ],
+      "uva": [
+        {
+          "min_dias": 90,
+          "max_dias": 179,
+          "min_monto": 1000,
+          "tna": 2.0
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 365,
+          "min_monto": 1000,
+          "tna": 5.0
+        }
+      ],
+      "uva_precancelable": [
+        {
+          "min_dias": 180,
+          "max_dias": 365,
+          "min_monto": 1000,
+          "tna": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "banco": "Banco Nación",
+    "logo": "./img/nacion.png",
+    "link": "https://www.bna.com.ar/Personas/PlazoFijo",
+    "destacado": false,
+    "tasas": {
+      "tradicional": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 10000,
+          "tna": 30.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 10000,
+          "tna": 29.0
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 179,
+          "min_monto": 10000,
+          "tna": 28.0
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 365,
+          "min_monto": 10000,
+          "tna": 27.0
+        }
+      ],
+      "dolares": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 1000,
+          "tna": 2.75
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 1000,
+          "tna": 3.25
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 179,
+          "min_monto": 1000,
+          "tna": 3.5
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 364,
+          "min_monto": 1000,
+          "tna": 4.25
+        },
+        {
+          "min_dias": 365,
+          "max_dias": 370,
+          "min_monto": 1000,
+          "tna": 5.25
+        }
+      ],
+      "uva_precancelable": [
+        {
+          "min_dias": 90,
+          "max_dias": 119,
+          "min_monto": 10000,
+          "tna": 2.5
+        },
+        {
+          "min_dias": 120,
+          "max_dias": 179,
+          "min_monto": 10000,
+          "tna": 3.0
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 364,
+          "min_monto": 10000,
+          "tna": 3.5
+        },
+        {
+          "min_dias": 365,
+          "max_dias": 370,
+          "min_monto": 10000,
+          "tna": 4.0
+        }
+      ]
+    }
+  },
+  {
+    "banco": "Banco Galicia",
+    "logo": "./img/galicia.png",
+    "link": "https://www.galicia.ar",
+    "destacado": true,
+    "tasas": {
+      "tradicional": [
+        {
+          "min_dias": 30,
+          "max_dias": 44,
+          "min_monto": 100,
+          "tna": 22.0
+        },
+        {
+          "min_dias": 45,
+          "max_dias": 59,
+          "min_monto": 100,
+          "tna": 22.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 100,
+          "tna": 24.0
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 119,
+          "min_monto": 100,
+          "tna": 26.0
+        },
+        {
+          "min_dias": 120,
+          "max_dias": 179,
+          "min_monto": 100,
+          "tna": 29.0
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 269,
+          "min_monto": 100,
+          "tna": 30.0
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 359,
+          "min_monto": 100,
+          "tna": 30.5
+        },
+        {
+          "min_dias": 360,
+          "max_dias": 365,
+          "min_monto": 100,
+          "tna": 31.0
+        }
+      ],
+      "dolares": [
+        {
+          "min_dias": 30,
+          "max_dias": 44,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 45,
+          "max_dias": 59,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 119,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 120,
+          "max_dias": 149,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 150,
+          "max_dias": 179,
+          "min_monto": 100,
+          "tna": 2.4
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 269,
+          "min_monto": 100,
+          "tna": 2.45
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 359,
+          "min_monto": 100,
+          "tna": 3.0
+        },
+        {
+          "min_dias": 360,
+          "max_dias": 365,
+          "min_monto": 100,
+          "tna": 3.75
+        }
+      ],
+      "uva": [
+        {
+          "min_dias": 90,
+          "max_dias": 365,
+          "min_monto": 100,
+          "tna": 1.0
+        }
+      ],
+      "uva_precancelable": [
+        {
+          "min_dias": 90,
+          "max_dias": 365,
+          "min_monto": 100,
+          "tna": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "banco": "Banco Santander",
+    "logo": "./img/santander.png",
+    "link": "https://www.santander.com.ar",
+    "destacado": false,
+    "tasas": {
+      "tradicional": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 500,
+          "tna": 25.0
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 500,
+          "tna": 24.0
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 119,
+          "min_monto": 500,
+          "tna": 24.0
+        },
+        {
+          "min_dias": 120,
+          "max_dias": 269,
+          "min_monto": 500,
+          "tna": 23.0
+        },
+        {
+          "min_dias": 240,
+          "max_dias": 365,
+          "min_monto": 500,
+          "tna": 23.0
+        }
+      ],
+      "dolares": [
+        {
+          "min_dias": 30,
+          "max_dias": 365,
+          "min_monto": 500,
+          "tna": 0.05
+        }
+      ],
+      "uva": [
+        {
+          "min_dias": 90,
+          "max_dias": 365,
+          "min_monto": 5000,
+          "tna": 0.0
+        }
+      ],
+      "precancelable": [
+        {
+          "min_dias": 180,
+          "max_dias": 365,
+          "min_monto": 5000,
+          "tna": 26.0
+        }
+      ]
+    }
+  },
+  {
+    "banco": "Ualá",
+    "logo": "./img/uala.png",
+    "link": "https://www.uala.com.ar",
+    "destacado": false,
+    "tasas": {
+      "tradicional": [
+        {
+          "min_dias": 30,
+          "max_dias": 59,
+          "min_monto": 1000,
+          "tna": 30
+        },
+        {
+          "min_dias": 60,
+          "max_dias": 89,
+          "min_monto": 1000,
+          "tna": 32
+        },
+        {
+          "min_dias": 90,
+          "max_dias": 179,
+          "min_monto": 1000,
+          "tna": 35
+        },
+        {
+          "min_dias": 180,
+          "max_dias": 269,
+          "min_monto": 1000,
+          "tna": 37
+        },
+        {
+          "min_dias": 270,
+          "max_dias": 364,
+          "min_monto": 1000,
+          "tna": 37
+        },
+        {
+          "min_dias": 365,
+          "max_dias": 370,
+          "min_monto": 1000,
+          "tna": 38
+        }
+      ]
+    }
+  }
+]

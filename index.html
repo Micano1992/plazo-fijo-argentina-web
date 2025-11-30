@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Mejor Plazo Fijo Argentina 2025 | Comparador de Tasas TNA</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Compará las tasas de Plazo Fijo de todos los bancos de Argentina. Calculadora de ganancias en pesos, dólares y UVA. Encontrá el banco que más paga hoy.">
+    <meta name="keywords"
+        content="plazo fijo, tasas, TNA, banco galicia, banco nacion, inversiones argentina, calculadora plazo fijo, dolar hoy">
+    <meta property="og:title" content="¿Qué banco paga más hoy? Comparador de Plazos Fijos 📊">
+    <meta property="og:description"
+        content="Calculá cuánto ganás invirtiendo en Plazo Fijo Tradicional, UVA o Dólares. Datos actualizados.">
+    <meta property="og:image" content="./img/galicia.png">
+    <meta property="og:type" content="website">
+    <title>Comparador Experto de Tasas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+        }
+
+        .simulador-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .input-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            font-weight: bold;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: #007bff;
+        }
+
+        .tabla-bancos {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .banco-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid transparent;
+        }
+
+        .info-banco {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 2;
+        }
+
+        .logo-banco {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .nombre-banco {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .tna-badge {
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .info-ganancia {
+            text-align: right;
+            flex: 1;
+        }
+
+        .ganancia-monto {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .btn-invertir {
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .mejor-opcion {
+            border-left-color: #2ecc71;
+            background-color: #fafffc;
+        }
+
+        .aviso-rango {
+            font-size: 0.75rem;
+            color: #666;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .etiqueta-tier {
+            background: #fff3cd;
+            color: #856404;
+            font-size: 0.7rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 600px) {
+
+            .banco-card,
+            .info-banco {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .boton-accion,
+            .btn-invertir {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Comparador Experto 📊</h1>
+            <p>Tasas segmentadas por <b>Días</b> y <b>Monto</b> de inversión.</p>
+        </header>
+
+        <div class="simulador-box">
+            <div class="input-group">
+                <label>Tipo</label>
+                <select id="tipo-pf" onchange="actualizarInterfaz()">
+                    <option value="tradicional">🇦🇷 Tradicional Pesos</option>
+                    <option value="dolares">💵 Tradicional Dólares</option>
+                    <option value="precancelable">⏱️ Precancelable (Fijo)</option>
+                    <option value="uva">📈 UVA Fijo</option>
+                    <option value="uva_precancelable"> 📈 UVA Precancelable</option>
+
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Monto a Invertir</label>
+                <input type="number" id="monto" value="100000" oninput="calcularTodo()">
+            </div>
+            <div class="input-group">
+                <label>Días de Plazo</label>
+                <input type="number" id="dias" value="30" oninput="calcularTodo()">
+            </div>
+        </div>
+
+        <div id="lista-bancos" class="tabla-bancos"></div>
+    </div>
+
+    <script>
+        const URL_JSON = "./tasas_bancos.json";
+        let datosBancos = [];
+        let monedaActual = 'ARS';
+
+        window.onload = async function () {
+            try {
+                const response = await fetch(URL_JSON);
+                datosBancos = await response.json();
+                actualizarInterfaz();
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        function actualizarInterfaz() {
+            const tipo = document.getElementById('tipo-pf').value;
+            monedaActual = tipo === 'dolares' ? 'USD' : 'ARS';
+
+            if (tipo === 'dolares') {
+                document.getElementById('monto').value = 1000;
+                document.getElementById('dias').value = 30;
+            } else if (tipo === 'uva') {
+                document.getElementById('dias').value = 180; // UVA suele requerir más plazo
+            } else {
+                document.getElementById('monto').value = 100000;
+                document.getElementById('dias').value = 30;
+            }
+            calcularTodo();
+        }
+
+        // --- EL NUEVO CEREBRO (Soporta Array de Reglas) ---
+        function obtenerTasaInteligente(tasasConfig, diasUsuario, montoUsuario) {
+            // 1. Si no existe la configuración, retorna null
+            if (!tasasConfig) return { tna: null, esPremium: false };
+
+            // 2. Si es un número simple (Bancos viejos o simples)
+            if (typeof tasasConfig === 'number') {
+                return { tna: tasasConfig, esPremium: false };
+            }
+
+            // 3. Si es un Array de Reglas (El nuevo sistema)
+            if (Array.isArray(tasasConfig)) {
+                // Paso A: Filtramos todas las reglas que cumplan con los DÍAS
+                const reglasPorDias = tasasConfig.filter(r =>
+                    diasUsuario >= r.min_dias && diasUsuario <= r.max_dias
+                );
+
+                if (reglasPorDias.length === 0) return { tna: null, esPremium: false };
+
+                // Paso B: De las reglas válidas por días, buscamos las que cumplan con el MONTO
+                // (El monto del usuario debe ser mayor o igual al minimo requerido)
+                const reglasValidas = reglasPorDias.filter(r =>
+                    montoUsuario >= (r.min_monto || 0)
+                );
+
+                if (reglasValidas.length === 0) return { tna: null, esPremium: false };
+
+                // Paso C: Si hay varias (ej: cumple >0 y cumple >10M), nos quedamos con la que pida MAYOR monto.
+                // Esa suele ser la tasa "Premium".
+                reglasValidas.sort((a, b) => b.min_monto - a.min_monto);
+
+                const mejorRegla = reglasValidas[0]; // La primera es la de mayor exigencia de monto
+                const esPremium = mejorRegla.min_monto > 0; // Si pidió monto minimo, es tasa tier
+
+                return { tna: mejorRegla.tna, esPremium: esPremium };
+            }
+
+            return { tna: null, esPremium: false };
+        }
+
+        function calcularTodo() {
+            const monto = parseFloat(document.getElementById('monto').value) || 0;
+            const dias = parseFloat(document.getElementById('dias').value) || 30;
+            const tipoSeleccionado = document.getElementById('tipo-pf').value;
+            const contenedor = document.getElementById('lista-bancos');
+
+            contenedor.innerHTML = "";
+            if (datosBancos.length === 0) return;
+
+            const bancosCalculados = datosBancos
+                .map(banco => {
+                    // Obtenemos la configuración de tasas para ese tipo (ej: tradicional)
+                    const config = banco.tasas ? banco.tasas[tipoSeleccionado] : null;
+
+                    // Calculamos la tasa exacta
+                    const resultado = obtenerTasaInteligente(config, dias, monto);
+
+                    if (resultado.tna === null) return null;
+
+                    const ganancia = monto * (resultado.tna / 100) * (dias / 365);
+                    return { ...banco, tnaFinal: resultado.tna, esPremium: resultado.esPremium, ganancia, total: monto + ganancia };
+                })
+                .filter(b => b !== null)
+                .sort((a, b) => b.ganancia - a.ganancia);
+
+            if (bancosCalculados.length === 0) {
+                contenedor.innerHTML = "<p style='text-align:center'>No hay bancos para estos parámetros.</p>";
+                return;
+            }
+
+            bancosCalculados.forEach((banco, index) => {
+                const esMejor = index === 0;
+                const gananciaFmt = banco.ganancia.toLocaleString('es-AR', { style: 'currency', currency: monedaActual, maximumFractionDigits: 0 });
+
+                // Etiqueta visual si accedió a una tasa preferencial por monto
+                const etiquetaPremium = banco.esPremium ? `<span class="etiqueta-tier">👑 TASA PREFERENCIAL</span>` : "";
+
+                let avisoUva = "";
+                if (tipoSeleccionado === 'uva') avisoUva = `<span class="aviso-rango">Inflación + ${banco.tnaFinal}%</span>`;
+
+                const html = `
+                    <div class="banco-card ${esMejor ? 'mejor-opcion' : ''}">
+                        <div class="info-banco">
+                            <img src="${banco.logo}" class="logo-banco">
+                            <div>
+                                <div class="nombre-banco">${banco.banco} ${etiquetaPremium}</div>
+                                <span class="tna-badge">${banco.tnaFinal}% TNA</span>
+                                ${avisoUva}
+                            </div>
+                        </div>
+                        <div class="info-ganancia">
+                            <div style="font-size:0.8em; color:#888;">INTERÉS ${dias} DÍAS &nbsp;&nbsp;&nbsp; </div>
+                            <div class="ganancia-monto">+${gananciaFmt} &nbsp;&nbsp;&nbsp </div> 
+                            <hv> </hv>
+                        </div>
+                        <div class="boton-accion">
+                            <a href="${banco.link}" target="_blank" class="btn-invertir">Invertir</a>
+                        </div>
+                    </div>
+                `;
+                contenedor.innerHTML += html;
+            });
+        }
+    </script>
+</body>
+
+</html>
