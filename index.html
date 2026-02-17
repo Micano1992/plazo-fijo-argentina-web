@@ -220,6 +220,24 @@
             margin: 18px 0;
         }
 
+        .acciones {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secundario {
+            border: 1px solid var(--border);
+            background: #fff;
+            color: #111827;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         footer {
             margin-top: 16px;
             text-align: center;
@@ -287,6 +305,11 @@
 
         <div class="resumen" id="resumen" aria-live="polite"></div>
 
+        <div class="acciones">
+            <button class="btn-secundario" onclick="compartirSimulacion()">🔗 Compartir simulación</button>
+            <button class="btn-secundario" onclick="restablecerValores()">↺ Restablecer</button>
+        </div>
+
         <div id="status" class="status">Cargando tasas...</div>
         <div id="lista-bancos" class="tabla-bancos"></div>
 
@@ -307,7 +330,8 @@
                 if (!response.ok) throw new Error('No se pudo cargar el JSON de tasas');
                 datosBancos = await response.json();
                 status.style.display = 'none';
-                actualizarInterfaz();
+                aplicarParametrosDesdeURL();
+                calcularTodo();
             } catch (error) {
                 console.error(error);
                 status.textContent = 'No se pudieron cargar las tasas. Intentá recargar la página.';
@@ -331,6 +355,54 @@
             }
 
             calcularTodo();
+        }
+
+        function aplicarParametrosDesdeURL() {
+            const p = new URLSearchParams(window.location.search);
+            const tipo = p.get('tipo');
+            const monto = p.get('monto');
+            const dias = p.get('dias');
+            const orden = p.get('orden');
+
+            const tipoEl = document.getElementById('tipo-pf');
+            const montoEl = document.getElementById('monto');
+            const diasEl = document.getElementById('dias');
+            const ordenEl = document.getElementById('orden');
+
+            if (tipo && [...tipoEl.options].some(o => o.value === tipo)) {
+                tipoEl.value = tipo;
+            }
+
+            actualizarInterfaz();
+
+            if (monto && !Number.isNaN(Number(monto))) montoEl.value = Math.max(1, Number(monto));
+            if (dias && !Number.isNaN(Number(dias))) diasEl.value = Math.max(1, Number(dias));
+            if (orden && [...ordenEl.options].some(o => o.value === orden)) ordenEl.value = orden;
+        }
+
+        function actualizarURL(tipo, monto, dias, orden) {
+            const p = new URLSearchParams();
+            p.set('tipo', tipo);
+            p.set('monto', String(monto));
+            p.set('dias', String(dias));
+            p.set('orden', orden);
+            history.replaceState({}, '', `${window.location.pathname}?${p.toString()}`);
+        }
+
+        async function compartirSimulacion() {
+            const url = window.location.href;
+            try {
+                await navigator.clipboard.writeText(url);
+                alert('Link copiado al portapapeles ✅');
+            } catch (_) {
+                prompt('Copiá este link:', url);
+            }
+        }
+
+        function restablecerValores() {
+            document.getElementById('tipo-pf').value = 'tradicional';
+            document.getElementById('orden').value = 'ganancia';
+            actualizarInterfaz();
         }
 
         function obtenerTasaInteligente(tasasConfig, diasUsuario, montoUsuario) {
@@ -443,6 +515,7 @@
             });
 
             renderResumen(bancosCalculados, dias);
+            actualizarURL(tipoSeleccionado, monto, dias, orden);
 
             bancosCalculados.forEach((banco, index) => {
                 const esMejor = index === 0;
