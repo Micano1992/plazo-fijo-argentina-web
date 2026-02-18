@@ -4,19 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tendencias de Finanzas | Plazo Fijo Argentina</title>
-  <meta name="description" content="Tendencias financieras del día: tasas, renta variable, cripto institucional y rotación sectorial." />
+  <meta name="description" content="Tendencias financieras del día: tasas globales, acciones por IA, ETF de BTC y tokenización de activos reales." />
   <style>
-    body{font-family:Segoe UI,Arial,sans-serif;background:#f6f7fb;margin:0;color:#1f2937}
-    .wrap{max-width:980px;margin:0 auto;padding:22px}
-    h1{margin-bottom:6px}
-    .muted{color:#6b7280}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
-    .tag{display:inline-block;background:#eef2ff;color:#3730a3;font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px}
-    a.btn{display:inline-block;margin-top:10px;text-decoration:none;background:#2563eb;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
-    ul{padding-left:18px}
-    .sources{margin-top:18px;background:#fff;padding:14px;border:1px solid #e5e7eb;border-radius:12px}
+    :root{--bg:#f6f7fb;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--primary:#2563eb;--chip:#eef2ff;--chipText:#3730a3}
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text)}
+    .wrap{max-width:1080px;margin:0 auto;padding:22px}
+    h1{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .tag{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:700}
+    a.btn{display:inline-block;margin-top:10px;text-decoration:none;background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
+    ul{padding-left:18px;margin:8px 0 0}
+    .sources{margin-top:18px;background:#fff;padding:14px;border:1px solid var(--line);border-radius:12px}
     .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .badge-update{display:inline-block;background:#ecfeff;color:#155e75;border:1px solid #a5f3fc;padding:4px 8px;border-radius:999px;font-size:.76rem;font-weight:700}
+    .quick-nav{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .quick-nav a{font-size:.82rem;text-decoration:none;background:#eef2ff;color:#1e3a8a;padding:6px 10px;border-radius:999px;border:1px solid #c7d2fe}
   </style>
 </head>
 <body>
@@ -24,49 +29,56 @@
     <div class="topbar">
       <div>
         <h1>Tendencias de Finanzas 📈</h1>
-        <div class="muted">Actualizado con señales de mercados globales y digital assets.</div>
+        <div class="muted">Señales agregadas desde Reuters Markets, MarketWatch y CoinDesk (contenido externo tratado como datos no confiables).</div>
+        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-18 00:07 UTC</div>
+        <nav class="quick-nav" aria-label="accesos rápidos de tendencias">
+          <a href="#macro">Macro y tasas</a>
+          <a href="#equities">Acciones</a>
+          <a href="#crypto">Cripto/Institucional</a>
+          <a href="#token">Tokenización y pagos</a>
+        </nav>
       </div>
       <a class="btn" href="./index.html">← Volver al comparador</a>
     </div>
 
     <div class="grid">
-      <article class="card">
+      <article class="card" id="macro">
         <div class="tag">Macro</div>
-        <h3>Tasas largas y bonos (10Y ~4%)</h3>
-        <p>La curva de tasas vuelve a dominar decisiones de cartera. Mayor sensibilidad de renta variable a datos macro e inflación.</p>
+        <h3>Rendimiento US 10Y en 4,06% con commodities débiles</h3>
+        <p>Reuters muestra el 10Y de EE.UU. cerca de 4,06%, mientras Brent (-1,88%) y cobre (-3,61%) reflejan cautela sobre crecimiento global.</p>
         <ul>
-          <li>Más foco en duración y riesgo de tasa.</li>
-          <li>Bonos cortos y money market vuelven a competir.</li>
+          <li>Mayor foco en datos de inflación/empleo para próximas ruedas.</li>
+          <li>Para perfiles prudentes, vuelve a ser clave la gestión de duración.</li>
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card" id="equities">
         <div class="tag">Equities</div>
-        <h3>Volatilidad en acciones ligadas a IA</h3>
-        <p>Hay señales de "AI anxiety" y rotación entre tecnológicas y sectores más defensivos/value.</p>
+        <h3>Volatilidad en narrativa IA y selección más estricta</h3>
+        <p>MarketWatch destaca ansiedad por IA con S&amp;P cerca de máximos, pero más dispersión entre empresas por valuación y calidad de balance.</p>
         <ul>
-          <li>Sube la dispersión entre ganadores y rezagados.</li>
-          <li>Importa más la calidad de resultados y guidance.</li>
+          <li>Sube la importancia de caja neta, márgenes y deuda controlada.</li>
+          <li>Eventos corporativos (secundarias, M&amp;A) disparan movimientos puntuales.</li>
         </ul>
       </article>
 
-      <article class="card">
-        <div class="tag">Crypto/Fintech</div>
-        <h3>Institucionalización cripto y stablecoins</h3>
-        <p>Se acelera la adopción institucional (ETFs/tesorerías) y marcos regulatorios para stablecoins y tokenización.</p>
+      <article class="card" id="crypto">
+        <div class="tag">Cripto/Institucional</div>
+        <h3>Fondos soberanos de Abu Dhabi superan US$1B en ETF de BTC</h3>
+        <p>CoinDesk reporta aumento de tenencias en el ETF IBIT durante el último trimestre de 2025, reforzando la adopción institucional.</p>
         <ul>
-          <li>Más productos regulados para acceso minorista.</li>
-          <li>Tokenized assets ganan tracción en pagos y treasury.</li>
+          <li>La tesis pasa de "apuesta táctica" a asignación más estratégica.</li>
+          <li>Crece la demanda de infraestructura de custodia y cumplimiento.</li>
         </ul>
       </article>
 
-      <article class="card">
-        <div class="tag">Estrategia</div>
-        <h3>Rotación sectorial activa</h3>
-        <p>Se observan movimientos desde sectores con múltiplos altos hacia negocios con cashflow más predecible.</p>
+      <article class="card" id="token">
+        <div class="tag">Tokenización</div>
+        <h3>Stablecoins reguladas y dividendos en oro tokenizado</h3>
+        <p>Avanza la licencia trust para Bridge (Stripe) y aparecen pagos corporativos en XAUT (oro tokenizado), señalando casos de uso reales.</p>
         <ul>
-          <li>Más importancia de balance y deuda.</li>
-          <li>Coberturas y diversificación vuelven al centro.</li>
+          <li>Convergencia acelerada entre fintech regulada y activos digitales.</li>
+          <li>Tendencia estructural: tokenización de activos del mundo real (RWA).</li>
         </ul>
         <a class="btn" href="./tendencias-ideas.html">Ver ideas de cartera</a>
         <a class="btn" href="./radar-financiero.html" style="margin-left:6px;">Abrir radar financiero</a>
@@ -80,7 +92,7 @@
         <li><a href="https://feeds.content.dowjones.io/public/rss/mw_topstories" target="_blank" rel="noopener noreferrer">MarketWatch Top Stories (RSS)</a></li>
         <li><a href="https://www.coindesk.com/arc/outboundfeeds/rss" target="_blank" rel="noopener noreferrer">CoinDesk RSS</a></li>
       </ul>
-      <p class="muted">Nota: esta página resume tendencias de mercado, no constituye asesoramiento financiero.</p>
+      <p class="muted">Nota: resumen educativo, no constituye asesoramiento financiero.</p>
     </section>
   </div>
 </body>

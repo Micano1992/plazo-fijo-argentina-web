@@ -39,8 +39,42 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 980px;
             margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #111827;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 0 0 8px 8px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            left: 12px;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: 700;
+            font-size: .86rem;
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 999px;
+            padding: 6px 10px;
         }
 
         header {
@@ -238,6 +272,33 @@
             cursor: pointer;
         }
 
+        .market-pulse {
+            margin-top: 10px;
+            margin-bottom: 16px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .pulse-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .pulse-card h3 {
+            margin: 0 0 6px;
+            font-size: 1rem;
+        }
+
+        .pulse-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .9rem;
+            line-height: 1.35;
+        }
+
         footer {
             margin-top: 16px;
             text-align: center;
@@ -246,7 +307,8 @@
         }
 
         @media (max-width: 740px) {
-            .resumen {
+            .resumen,
+            .market-pulse {
                 grid-template-columns: 1fr;
             }
 
@@ -268,15 +330,20 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#simulador">Saltar al simulador</a>
 
     <div class="container">
         <header>
             <h1>Comparador Experto 📊</h1>
-            <p><a href="./tendencias-finanzas.html" style="display:inline-block;margin-top:8px;text-decoration:none;background:#007bff;color:#fff;padding:8px 12px;border-radius:6px;font-weight:bold;">Ver tendencias de Finanzas del día →</a></p>
+            <nav class="top-nav" aria-label="navegación principal">
+                <a href="./tendencias-finanzas.html">Tendencias de Finanzas</a>
+                <a href="./radar-financiero.html">Radar Financiero</a>
+                <a href="./tendencias-ideas.html">Ideas de cartera</a>
+            </nav>
             <p class="subtitle">Compará tasas por <b>días</b> y <b>monto</b> para encontrar la mejor opción.</p>
         </header>
 
-        <div class="simulador-box">
+        <div class="simulador-box" id="simulador">
             <div class="input-group">
                 <label for="tipo-pf">Tipo de Plazo Fijo</label>
                 <select id="tipo-pf" onchange="actualizarInterfaz()">
@@ -310,6 +377,25 @@
             <button class="btn-secundario" onclick="compartirSimulacion()">🔗 Compartir simulación</button>
             <button class="btn-secundario" onclick="restablecerValores()">↺ Restablecer</button>
         </div>
+
+        <section class="market-pulse" aria-label="pulso financiero global">
+            <article class="pulse-card">
+                <h3>📌 Tasa US 10Y cerca de 4,06%</h3>
+                <p>Mayor sensibilidad del mercado a inflación y empleo; duración corta vuelve a ser táctica para perfiles conservadores.</p>
+            </article>
+            <article class="pulse-card">
+                <h3>🤖 IA con volatilidad en acciones</h3>
+                <p>Las tecnológicas siguen líderes, pero sube la dispersión por valuación y balance. Conviene mirar caja y deuda.</p>
+            </article>
+            <article class="pulse-card">
+                <h3>₿ Flujos institucionales a ETF de BTC</h3>
+                <p>Fondos soberanos de Abu Dhabi elevaron exposición a IBIT; refuerza la tesis de adopción institucional de cripto.</p>
+            </article>
+            <article class="pulse-card">
+                <h3>🪙 Tokenización de activos reales</h3>
+                <p>Crecen casos de uso (dividendos en oro tokenizado y stablecoins reguladas), acercando finanzas tradicionales y blockchain.</p>
+            </article>
+        </section>
 
         <div id="status" class="status">Cargando tasas...</div>
         <div id="lista-bancos" class="tabla-bancos"></div>
