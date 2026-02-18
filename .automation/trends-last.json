@@ -1,0 +1,23 @@
+{
+  "updatedAtUtc": "2026-02-18T00:00:00Z",
+  "sources": {
+    "reuters": [
+      "US10Y_near_4pct",
+      "equity_rotation_ai_anxiety"
+    ],
+    "marketwatch": [
+      "10y_move_toward_4pct_ai_anxiety"
+    ],
+    "coindesk": [
+      "abu_dhabi_bitcoin_etf_holdings_over_1b",
+      "bridge_initial_approval_national_bank_trust_charter",
+      "elemental_royalty_dividends_in_tokenized_gold"
+    ]
+  },
+  "themes": [
+    "tasas_largas_y_sensibilidad_macro",
+    "rotacion_growth_a_quality",
+    "stablecoins_con_marco_regulatorio",
+    "tokenizacion_activos_reales"
+  ]
+}

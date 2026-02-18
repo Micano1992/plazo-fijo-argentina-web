@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ideas por Tendencia | Plazo Fijo Argentina</title>
-  <meta name="description" content="Ideas de cartera por perfil según tendencias financieras actuales." />
+  <meta name="description" content="Ideas educativas de cartera por perfil en contexto de tasas altas, rotación de mercado y tokenización." />
   <style>
-    body{font-family:Segoe UI,Arial,sans-serif;background:#f6f7fb;margin:0;color:#111827}
-    .wrap{max-width:980px;margin:0 auto;padding:22px}
+    :root{--bg:#f6f7fb;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--primary:#2563eb}
+    body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text)}
+    .wrap{max-width:1020px;margin:0 auto;padding:22px}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
     .badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.75rem;font-weight:700}
     .c{background:#dcfce7;color:#166534}.m{background:#fef3c7;color:#92400e}.a{background:#fee2e2;color:#991b1b}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-    a.btn{display:inline-block;text-decoration:none;background:#2563eb;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
-    .muted{color:#6b7280}
+    a.btn{display:inline-block;text-decoration:none;background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
+    .muted{color:var(--muted)}
+    .small{font-size:.88rem}
   </style>
 </head>
 <body>
@@ -30,36 +32,36 @@
     <div class="cards">
       <article class="card">
         <span class="badge c">Conservador</span>
-        <h3>Escenario: tasas altas + incertidumbre</h3>
+        <h3>Tasas altas + curva sensible</h3>
         <ul>
-          <li>Priorizar liquidez y plazos cortos.</li>
-          <li>Escalonar vencimientos (ladder).</li>
-          <li>Mantener colchón de emergencia (3-6 meses).</li>
+          <li>Priorizar plazos cortos y liquidez escalonada (ladder).</li>
+          <li>Revisar exposición de duración cada 30 días.</li>
+          <li>Mantener fondo de emergencia separado (3-6 meses).</li>
         </ul>
       </article>
 
       <article class="card">
         <span class="badge m">Moderado</span>
-        <h3>Escenario: rotación sectorial</h3>
+        <h3>Rotación entre growth y quality</h3>
         <ul>
-          <li>Combinar instrumentos de tasa + equity diversificado.</li>
-          <li>Reducir concentración en un solo tema (ej. IA).</li>
-          <li>Rebalanceo mensual simple por pesos objetivo.</li>
+          <li>Reducir concentración temática (ej. solo IA).</li>
+          <li>Combinar tasa fija + renta variable diversificada.</li>
+          <li>Usar rebalanceo por bandas para bajar fricción emocional.</li>
         </ul>
       </article>
 
       <article class="card">
         <span class="badge a">Agresivo</span>
-        <h3>Escenario: beta alta + cripto institucional</h3>
+        <h3>Infra cripto regulada y tokenización</h3>
         <ul>
-          <li>Definir límite de pérdida por posición.</li>
-          <li>Evitar apalancamiento sin plan de riesgo.</li>
-          <li>Usar toma parcial de ganancias en subas fuertes.</li>
+          <li>Asignar porcentaje máximo de riesgo por bloque temático.</li>
+          <li>Definir reglas de salida antes de entrar.</li>
+          <li>Evitar apalancamiento sin plan explícito de pérdidas.</li>
         </ul>
       </article>
     </div>
 
-    <p class="muted" style="margin-top:16px;">Tip: podés enlazar esta página desde home y actualizar semanalmente con nuevas señales de mercado.</p>
+    <p class="muted small" style="margin-top:16px;">Nuevo foco observado: stablecoins bajo mayor supervisión regulatoria y casos de uso de activos reales tokenizados (ej. oro).</p>
   </div>
 </body>
 </html>
