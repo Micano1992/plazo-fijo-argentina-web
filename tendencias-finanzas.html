@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tendencias de Finanzas | Plazo Fijo Argentina</title>
-  <meta name="description" content="Tendencias financieras del día: tasas globales, acciones por IA, ETF de BTC y tokenización de activos reales." />
+  <meta name="description" content="Tendencias financieras del día: riesgo en mega tech, ruido por aranceles, foco en datos de inflación y volatilidad cripto ligada a noticias de IA." />
   <style>
-    :root{--bg:#f6f7fb;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--primary:#2563eb;--chip:#eef2ff;--chipText:#3730a3}
+    :root{--bg:#f6f7fb;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--primary:#2563eb;--chip:#eef2ff;--chipText:#3730a3;--warn:#b45309}
     *{box-sizing:border-box}
     body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text)}
     .wrap{max-width:1080px;margin:0 auto;padding:22px}
@@ -17,11 +17,12 @@
     .tag{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:700}
     a.btn{display:inline-block;margin-top:10px;text-decoration:none;background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
     ul{padding-left:18px;margin:8px 0 0}
-    .sources{margin-top:18px;background:#fff;padding:14px;border:1px solid var(--line);border-radius:12px}
+    .sources,.pulse{margin-top:18px;background:#fff;padding:14px;border:1px solid var(--line);border-radius:12px}
     .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
     .badge-update{display:inline-block;background:#ecfeff;color:#155e75;border:1px solid #a5f3fc;padding:4px 8px;border-radius:999px;font-size:.76rem;font-weight:700}
     .quick-nav{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
     .quick-nav a{font-size:.82rem;text-decoration:none;background:#eef2ff;color:#1e3a8a;padding:6px 10px;border-radius:999px;border:1px solid #c7d2fe}
+    .pulse strong{color:var(--warn)}
   </style>
 </head>
 <body>
@@ -30,54 +31,60 @@
       <div>
         <h1>Tendencias de Finanzas 📈</h1>
         <div class="muted">Señales agregadas desde Reuters Markets, MarketWatch y CoinDesk (contenido externo tratado como datos no confiables).</div>
-        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-18 00:10 UTC</div>
+        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-24 00:00 UTC</div>
         <nav class="quick-nav" aria-label="accesos rápidos de tendencias">
           <a href="#macro">Macro y tasas</a>
           <a href="#equities">Acciones</a>
-          <a href="#crypto">Cripto/Institucional</a>
-          <a href="#token">Tokenización y pagos</a>
+          <a href="#crypto">Cripto</a>
+          <a href="#watch">Qué mirar esta semana</a>
         </nav>
       </div>
       <a class="btn" href="./index.html">← Volver al comparador</a>
     </div>
+
+    <section class="pulse" aria-live="polite">
+      <h2 style="margin-top:0">Pulso rápido de mercado</h2>
+      <p class="muted" style="margin-bottom:0"><strong>Riesgo en aumento:</strong> se combina debilidad de índices globales (Reuters), presión en mega tech y software (MarketWatch) y caída en cripto asociada a titulares de IA (CoinDesk).</p>
+    </section>
+
     <div class="grid">
       <article class="card" id="macro">
         <div class="tag">Macro</div>
-        <h3>Mercado mixto: acciones en máximos y señales de desaceleración en commodities</h3>
-        <p>Reuters Markets refleja índices de acciones positivos (S&amp;P 500 y STOXX al alza), mientras cobre y Brent operan con bajas, señal de cautela en crecimiento global.</p>
+        <h3>Sesgo defensivo global: acciones a la baja y bonos todavía exigentes</h3>
+        <p>Reuters Markets muestra caídas en S&amp;P 500, Nasdaq y Dow Jones, con rendimiento del Treasury 10Y en torno a 4,03%.</p>
         <ul>
-          <li>US 10Y cerca de 4,06% mantiene presión sobre valuaciones largas.</li>
-          <li>Para perfiles conservadores, duración corta y liquidez siguen siendo tácticas clave.</li>
+          <li>La combinación "equity down + yield alto" mantiene frágiles las valuaciones de crecimiento.</li>
+          <li>Para perfiles conservadores, liquidez y plazos cortos siguen siendo prioridad táctica.</li>
         </ul>
       </article>
 
       <article class="card" id="equities">
         <div class="tag">Equities</div>
-        <h3>El 10Y acercándose a 4% reaviva ansiedad por valuaciones de IA</h3>
-        <p>MarketWatch destaca que, pese al buen nivel del S&amp;P, hay mayor dispersión entre compañías tecnológicas por sensibilidad a tasas y resultados.</p>
+        <h3>"Lag 7" y estrés en software: la concentración tecnológica vuelve al centro</h3>
+        <p>MarketWatch resalta debilidad de Big Tech, pérdidas fuertes en software y lectura sensible de cada titular vinculado a IA.</p>
         <ul>
-          <li>Sube la relevancia de flujo de caja y deuda controlada.</li>
-          <li>Eventos corporativos (como ventas secundarias) generan volatilidad táctica.</li>
+          <li>Sube la importancia de calidad de ganancias, caja y deuda manejable.</li>
+          <li>Ruido por aranceles y discusión sobre datos de empleo/CPI añade volatilidad de corto plazo.</li>
         </ul>
       </article>
 
       <article class="card" id="crypto">
-        <div class="tag">Cripto/Institucional</div>
-        <h3>Abu Dhabi supera US$1B en ETF de Bitcoin y crece la infraestructura institucional</h3>
-        <p>CoinDesk reporta más exposición de fondos soberanos a IBIT y foco en custodios/plataformas para grandes jugadores.</p>
+        <div class="tag">Cripto</div>
+        <h3>Cripto corrige junto al "risk-off", pero la capa de infraestructura sigue activa</h3>
+        <p>CoinDesk reporta caídas en el mercado cripto en paralelo con shock de acciones tecnológicas, mientras continúan lanzamientos de productos e infraestructura (NEAR, Solana, exchanges).</p>
         <ul>
-          <li>La adopción institucional de BTC gana carácter estructural.</li>
-          <li>Mejora el caso de uso para servicios regulados de custody/compliance.</li>
+          <li>Se observa divergencia entre precio de corto plazo y construcción de largo plazo.</li>
+          <li>Persisten riesgos operativos (exploits/bridges), reforzando foco en seguridad y custodia.</li>
         </ul>
       </article>
 
-      <article class="card" id="token">
-        <div class="tag">Tokenización</div>
-        <h3>Stablecoins reguladas y pagos/dividendos en oro tokenizado</h3>
-        <p>Bridge (Stripe) avanza con aprobación inicial de trust charter y aparecen dividendos en XAUT, reforzando la convergencia entre finanzas tradicionales y activos tokenizados.</p>
+      <article class="card" id="watch">
+        <div class="tag">Watchlist</div>
+        <h3>Qué mirar los próximos días</h3>
         <ul>
-          <li>Tendencia RWA (real-world assets) continúa acelerándose.</li>
-          <li>Mayor tracción en casos de uso empresariales, no solo especulativos.</li>
+          <li>Trayectoria del US 10Y y reacción de Nasdaq ante nuevos titulares de IA.</li>
+          <li>Impacto en sectores sensibles (software, semis, plataformas).</li>
+          <li>Correlación BTC/altcoins con riesgo global en jornadas de datos macro.</li>
         </ul>
         <a class="btn" href="./tendencias-ideas.html">Ver ideas de cartera</a>
         <a class="btn" href="./radar-financiero.html" style="margin-left:6px;">Abrir radar financiero</a>
