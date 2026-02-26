@@ -4,24 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tendencias de Finanzas | Plazo Fijo Argentina</title>
-  <meta name="description" content="Tendencias financieras del día: tasas globales, acciones por IA, ETF de BTC y tokenización de activos reales." />
+  <meta name="description" content="Resumen actualizado de tendencias financieras globales: tasas, tecnológicas/IA, resultados corporativos y cripto institucional." />
   <style>
-    :root{--bg:#f6f7fb;--card:#fff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;--primary:#2563eb;--chip:#eef2ff;--chipText:#3730a3}
+    :root{
+      --bg:#f4f7fb;--card:#ffffff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;
+      --primary:#1d4ed8;--primarySoft:#dbeafe;--chip:#eef2ff;--chipText:#3730a3;--ok:#065f46;
+      --shadow:0 6px 24px rgba(17,24,39,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b1020;--card:#111827;--line:#1f2937;--text:#e5e7eb;--muted:#9ca3af;--primary:#60a5fa;--primarySoft:#1e3a8a33;--chip:#1f2937;--chipText:#c7d2fe;--ok:#34d399;--shadow:none}
+    }
     *{box-sizing:border-box}
-    body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text)}
-    .wrap{max-width:1080px;margin:0 auto;padding:22px}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text);line-height:1.5}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
     h1{margin:0 0 6px}
     .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
-    .tag{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:700}
-    a.btn{display:inline-block;margin-top:10px;text-decoration:none;background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
-    ul{padding-left:18px;margin:8px 0 0}
-    .sources{margin-top:18px;background:#fff;padding:14px;border:1px solid var(--line);border-radius:12px}
-    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
     .badge-update{display:inline-block;background:#ecfeff;color:#155e75;border:1px solid #a5f3fc;padding:4px 8px;border-radius:999px;font-size:.76rem;font-weight:700}
-    .quick-nav{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
-    .quick-nav a{font-size:.82rem;text-decoration:none;background:#eef2ff;color:#1e3a8a;padding:6px 10px;border-radius:999px;border:1px solid #c7d2fe}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.78rem;padding:4px 10px;border-radius:999px;font-weight:700}
+    .quick-nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .quick-nav a{font-size:.84rem;text-decoration:none;background:var(--primarySoft);color:var(--primary);padding:7px 10px;border-radius:999px;border:1px solid #c7d2fe}
+    .btn{display:inline-block;margin-top:8px;text-decoration:none;background:var(--primary);color:#fff;padding:9px 12px;border-radius:10px;font-weight:600;border:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+    .tag{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:700}
+    ul{padding-left:18px;margin:8px 0 0}
+    .sources{margin-top:18px;background:var(--card);padding:14px;border:1px solid var(--line);border-radius:12px}
+    .kpi{margin-top:14px;padding:12px;border:1px dashed #86efac;border-radius:10px;background:#f0fdf4;color:var(--ok);font-weight:600}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
 <body>
@@ -29,69 +40,82 @@
     <div class="topbar">
       <div>
         <h1>Tendencias de Finanzas 📈</h1>
-        <div class="muted">Señales agregadas desde Reuters Markets, MarketWatch y CoinDesk (contenido externo tratado como datos no confiables).</div>
-        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-18 00:10 UTC</div>
+        <p class="muted">Señales agregadas desde Reuters Markets, MarketWatch y CoinDesk (fuentes externas tratadas como datos no confiables).</p>
+        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-26 00:00 UTC</div>
+        <div class="chips" aria-label="temas en tendencia">
+          <span class="chip">Rally en índices globales</span>
+          <span class="chip">Resultados tech/IA mixtos</span>
+          <span class="chip">Rebote de Bitcoin cerca de 69k</span>
+          <span class="chip">Sensibilidad a tasas largas</span>
+        </div>
         <nav class="quick-nav" aria-label="accesos rápidos de tendencias">
           <a href="#macro">Macro y tasas</a>
-          <a href="#equities">Acciones</a>
-          <a href="#crypto">Cripto/Institucional</a>
-          <a href="#token">Tokenización y pagos</a>
+          <a href="#equities">Acciones y earnings</a>
+          <a href="#crypto">Cripto y riesgo</a>
+          <a href="#ideas">Cómo usarlo en cartera</a>
         </nav>
       </div>
       <a class="btn" href="./index.html">← Volver al comparador</a>
     </div>
+
+    <div class="kpi" role="status" aria-live="polite">
+      Sesgo del día: <strong>risk-on selectivo</strong>. Suben índices, pero la dispersión por resultados y valuación sigue alta.
+    </div>
+
     <div class="grid">
       <article class="card" id="macro">
         <div class="tag">Macro</div>
-        <h3>Mercado mixto: acciones en máximos y señales de desaceleración en commodities</h3>
-        <p>Reuters Markets refleja índices de acciones positivos (S&amp;P 500 y STOXX al alza), mientras cobre y Brent operan con bajas, señal de cautela en crecimiento global.</p>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Acciones globales en verde con tasa US10Y alrededor de 4,06%</h2>
+        <p>Reuters Markets muestra S&amp;P 500, Nasdaq, Dow, STOXX y FTSE al alza, con sesgo de apetito por riesgo, mientras la tasa larga de EE.UU. continúa en zona que exige disciplina de valuación.</p>
         <ul>
-          <li>US 10Y cerca de 4,06% mantiene presión sobre valuaciones largas.</li>
-          <li>Para perfiles conservadores, duración corta y liquidez siguen siendo tácticas clave.</li>
+          <li>El mercado premia crecimiento, pero penaliza duration excesiva cuando suben rendimientos.</li>
+          <li>Para perfiles conservadores en ARS/USD, sigue útil combinar renta fija corta con liquidez.</li>
         </ul>
       </article>
 
       <article class="card" id="equities">
-        <div class="tag">Equities</div>
-        <h3>El 10Y acercándose a 4% reaviva ansiedad por valuaciones de IA</h3>
-        <p>MarketWatch destaca que, pese al buen nivel del S&amp;P, hay mayor dispersión entre compañías tecnológicas por sensibilidad a tasas y resultados.</p>
+        <div class="tag">Acciones</div>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Earnings corporativos: tono mixto en software/consumo y foco en guidance</h2>
+        <p>En MarketWatch dominaron reportes de empresas (Snowflake, Salesforce, retail y medios), con reacción selectiva: los inversores priorizan proyecciones futuras más que el trimestre cerrado.</p>
         <ul>
-          <li>Sube la relevancia de flujo de caja y deuda controlada.</li>
-          <li>Eventos corporativos (como ventas secundarias) generan volatilidad táctica.</li>
+          <li>La narrativa IA sigue fuerte, pero el mercado exige monetización tangible.</li>
+          <li>Mayor volatilidad post-earnings favorece entradas escalonadas en lugar de all-in.</li>
         </ul>
       </article>
 
       <article class="card" id="crypto">
-        <div class="tag">Cripto/Institucional</div>
-        <h3>Abu Dhabi supera US$1B en ETF de Bitcoin y crece la infraestructura institucional</h3>
-        <p>CoinDesk reporta más exposición de fondos soberanos a IBIT y foco en custodios/plataformas para grandes jugadores.</p>
+        <div class="tag">Cripto</div>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Bitcoin rebota hacia USD 69.000, con dudas sobre la solidez del movimiento</h2>
+        <p>CoinDesk destaca una recuperación rápida de BTC y el impacto cruzado con resultados de Nvidia/tema IA, pero analistas advierten que podría ser rebote técnico dentro de rango.</p>
         <ul>
-          <li>La adopción institucional de BTC gana carácter estructural.</li>
-          <li>Mejora el caso de uso para servicios regulados de custody/compliance.</li>
+          <li>Escenario base: alta volatilidad y confirmación pendiente de tendencia.</li>
+          <li>Para gestión de riesgo, priorizar tamaño de posición y rebalanceos periódicos.</li>
         </ul>
       </article>
 
-      <article class="card" id="token">
-        <div class="tag">Tokenización</div>
-        <h3>Stablecoins reguladas y pagos/dividendos en oro tokenizado</h3>
-        <p>Bridge (Stripe) avanza con aprobación inicial de trust charter y aparecen dividendos en XAUT, reforzando la convergencia entre finanzas tradicionales y activos tokenizados.</p>
+      <article class="card" id="ideas">
+        <div class="tag">Aplicación práctica</div>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Ajustes tácticos sugeridos para seguimiento diario</h2>
         <ul>
-          <li>Tendencia RWA (real-world assets) continúa acelerándose.</li>
-          <li>Mayor tracción en casos de uso empresariales, no solo especulativos.</li>
+          <li><strong>Watchlist</strong>: separar "growth rentable" vs "growth sin caja" para evitar señales falsas.</li>
+          <li><strong>Renta fija</strong>: monitorear umbral US10Y &gt; 4,10% como posible gatillo de presión en tecnológicas.</li>
+          <li><strong>Cripto</strong>: usar niveles y no titulares; confirmar volumen antes de perseguir subas.</li>
+          <li><strong>Diversificación</strong>: sostener núcleo defensivo para amortiguar shocks de earnings.</li>
         </ul>
         <a class="btn" href="./tendencias-ideas.html">Ver ideas de cartera</a>
         <a class="btn" href="./radar-financiero.html" style="margin-left:6px;">Abrir radar financiero</a>
       </article>
     </div>
 
-    <section class="sources">
-      <h3>Fuentes consultadas</h3>
+    <section class="sources" aria-labelledby="fuentes-title">
+      <h3 id="fuentes-title">Fuentes consultadas</h3>
       <ul>
         <li><a href="https://www.reuters.com/markets/" target="_blank" rel="noopener noreferrer">Reuters Markets</a></li>
         <li><a href="https://feeds.content.dowjones.io/public/rss/mw_topstories" target="_blank" rel="noopener noreferrer">MarketWatch Top Stories (RSS)</a></li>
         <li><a href="https://www.coindesk.com/arc/outboundfeeds/rss" target="_blank" rel="noopener noreferrer">CoinDesk RSS</a></li>
       </ul>
-      <p class="muted">Nota: resumen educativo, no constituye asesoramiento financiero.</p>
+      <p class="muted">Resumen educativo. No constituye asesoramiento financiero personalizado.</p>
+      <p class="sr-only">Contenido preparado para lectura accesible con estructura semántica y navegación por secciones.</p>
     </section>
   </div>
 </body>
