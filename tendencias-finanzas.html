@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tendencias de Finanzas | Plazo Fijo Argentina</title>
-  <meta name="description" content="Resumen actualizado de tendencias financieras globales: tasas, tecnológicas/IA, resultados corporativos y cripto institucional." />
+  <meta name="description" content="Resumen actualizado de tendencias financieras globales: riesgo geopolítico, tasas, petróleo/oro y cripto regulatorio." />
   <style>
     :root{
       --bg:#f4f7fb;--card:#ffffff;--line:#e5e7eb;--text:#111827;--muted:#6b7280;
-      --primary:#1d4ed8;--primarySoft:#dbeafe;--chip:#eef2ff;--chipText:#3730a3;--ok:#065f46;
+      --primary:#1d4ed8;--primarySoft:#dbeafe;--chip:#eef2ff;--chipText:#3730a3;--ok:#92400e;
       --shadow:0 6px 24px rgba(17,24,39,.06);
     }
     @media (prefers-color-scheme: dark){
-      :root{--bg:#0b1020;--card:#111827;--line:#1f2937;--text:#e5e7eb;--muted:#9ca3af;--primary:#60a5fa;--primarySoft:#1e3a8a33;--chip:#1f2937;--chipText:#c7d2fe;--ok:#34d399;--shadow:none}
+      :root{--bg:#0b1020;--card:#111827;--line:#1f2937;--text:#e5e7eb;--muted:#9ca3af;--primary:#60a5fa;--primarySoft:#1e3a8a33;--chip:#1f2937;--chipText:#c7d2fe;--ok:#fbbf24;--shadow:none}
     }
     *{box-sizing:border-box}
     body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:var(--text);line-height:1.5}
@@ -31,7 +31,11 @@
     .tag{display:inline-block;background:var(--chip);color:var(--chipText);font-size:.75rem;padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:700}
     ul{padding-left:18px;margin:8px 0 0}
     .sources{margin-top:18px;background:var(--card);padding:14px;border:1px solid var(--line);border-radius:12px}
-    .kpi{margin-top:14px;padding:12px;border:1px dashed #86efac;border-radius:10px;background:#f0fdf4;color:var(--ok);font-weight:600}
+    .kpi{margin-top:14px;padding:12px;border:1px dashed #fcd34d;border-radius:10px;background:#fffbeb;color:var(--ok);font-weight:600}
+    .scenario{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:12px}
+    .scenario .item{background:var(--card);border:1px solid var(--line);padding:10px;border-radius:10px}
+    .scenario .label{font-size:.76rem;color:var(--muted);display:block}
+    .scenario .value{font-weight:700}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
@@ -41,17 +45,17 @@
       <div>
         <h1>Tendencias de Finanzas 📈</h1>
         <p class="muted">Señales agregadas desde Reuters Markets, MarketWatch y CoinDesk (fuentes externas tratadas como datos no confiables).</p>
-        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-02-26 00:00 UTC</div>
+        <div class="badge-update" aria-label="fecha de actualización">Actualizado: 2026-03-01 00:00 UTC</div>
         <div class="chips" aria-label="temas en tendencia">
-          <span class="chip">Rally en índices globales</span>
-          <span class="chip">Resultados tech/IA mixtos</span>
-          <span class="chip">Rebote de Bitcoin cerca de 69k</span>
-          <span class="chip">Sensibilidad a tasas largas</span>
+          <span class="chip">Aversión al riesgo por tensión geopolítica</span>
+          <span class="chip">Oro y petróleo en alza</span>
+          <span class="chip">Baja de yields largas</span>
+          <span class="chip">BTC sensible a regulación y liquidez</span>
         </div>
         <nav class="quick-nav" aria-label="accesos rápidos de tendencias">
           <a href="#macro">Macro y tasas</a>
-          <a href="#equities">Acciones y earnings</a>
-          <a href="#crypto">Cripto y riesgo</a>
+          <a href="#equities">Acciones y geopolitics</a>
+          <a href="#crypto">Cripto y regulación</a>
           <a href="#ideas">Cómo usarlo en cartera</a>
         </nav>
       </div>
@@ -59,48 +63,55 @@
     </div>
 
     <div class="kpi" role="status" aria-live="polite">
-      Sesgo del día: <strong>risk-on selectivo</strong>. Suben índices, pero la dispersión por resultados y valuación sigue alta.
+      Sesgo del día: <strong>risk-off táctico</strong>. Caen los índices de EE.UU., suben activos refugio y el mercado prioriza cobertura.
     </div>
+
+    <section class="scenario" aria-label="snapshot de mercado">
+      <div class="item"><span class="label">Índices USA</span><span class="value">S&P 500 / Nasdaq en rojo</span></div>
+      <div class="item"><span class="label">Commodities</span><span class="value">Oro +2% | Brent +0,47%</span></div>
+      <div class="item"><span class="label">Bonos</span><span class="value">US10Y ~3,95% (retrocede)</span></div>
+      <div class="item"><span class="label">Lectura táctica</span><span class="value">Más selectividad y coberturas</span></div>
+    </section>
 
     <div class="grid">
       <article class="card" id="macro">
         <div class="tag">Macro</div>
-        <h2 style="font-size:1.06rem;margin:.15rem 0;">Acciones globales en verde con tasa US10Y alrededor de 4,06%</h2>
-        <p>Reuters Markets muestra S&amp;P 500, Nasdaq, Dow, STOXX y FTSE al alza, con sesgo de apetito por riesgo, mientras la tasa larga de EE.UU. continúa en zona que exige disciplina de valuación.</p>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Flujo hacia refugios: suben oro y crudo, baja el rendimiento del Treasury a 10 años</h2>
+        <p>Reuters Markets refleja una rotación defensiva: índices de riesgo en negativo, mientras oro y petróleo toman impulso y los bonos largos reciben demanda.</p>
         <ul>
-          <li>El mercado premia crecimiento, pero penaliza duration excesiva cuando suben rendimientos.</li>
-          <li>Para perfiles conservadores en ARS/USD, sigue útil combinar renta fija corta con liquidez.</li>
+          <li>Contexto útil para carteras en ARS/USD: proteger liquidez y mantener duration controlada.</li>
+          <li>Con volatilidad geopolítica, evitar concentración excesiva en un solo factor de riesgo.</li>
         </ul>
       </article>
 
       <article class="card" id="equities">
         <div class="tag">Acciones</div>
-        <h2 style="font-size:1.06rem;margin:.15rem 0;">Earnings corporativos: tono mixto en software/consumo y foco en guidance</h2>
-        <p>En MarketWatch dominaron reportes de empresas (Snowflake, Salesforce, retail y medios), con reacción selectiva: los inversores priorizan proyecciones futuras más que el trimestre cerrado.</p>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Mercado atento al conflicto en Medio Oriente y a su impacto en inflación/energía</h2>
+        <p>MarketWatch prioriza cobertura del conflicto con Irán y el posible efecto sobre energía, política monetaria y sentimiento de riesgo global.</p>
         <ul>
-          <li>La narrativa IA sigue fuerte, pero el mercado exige monetización tangible.</li>
-          <li>Mayor volatilidad post-earnings favorece entradas escalonadas en lugar de all-in.</li>
+          <li>Cuando sube la incertidumbre geopolítica, suele ampliarse la dispersión sectorial.</li>
+          <li>Energía/defensivos pueden ganar tracción relativa frente a growth de múltiplos exigentes.</li>
         </ul>
       </article>
 
       <article class="card" id="crypto">
         <div class="tag">Cripto</div>
-        <h2 style="font-size:1.06rem;margin:.15rem 0;">Bitcoin rebota hacia USD 69.000, con dudas sobre la solidez del movimiento</h2>
-        <p>CoinDesk destaca una recuperación rápida de BTC y el impacto cruzado con resultados de Nvidia/tema IA, pero analistas advierten que podría ser rebote técnico dentro de rango.</p>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Bitcoin entre narrativa macro y agenda regulatoria en EE.UU.</h2>
+        <p>CoinDesk resalta que BTC sigue muy sensible a liquidez global, avances legislativos y headlines geopolíticos, con episodios de alta volatilidad intradía.</p>
         <ul>
-          <li>Escenario base: alta volatilidad y confirmación pendiente de tendencia.</li>
-          <li>Para gestión de riesgo, priorizar tamaño de posición y rebalanceos periódicos.</li>
+          <li>Escenario base: rango amplio y movimientos rápidos por noticias.</li>
+          <li>Gestión prudente: tamaño de posición, entradas parciales y reglas de salida predefinidas.</li>
         </ul>
       </article>
 
       <article class="card" id="ideas">
         <div class="tag">Aplicación práctica</div>
-        <h2 style="font-size:1.06rem;margin:.15rem 0;">Ajustes tácticos sugeridos para seguimiento diario</h2>
+        <h2 style="font-size:1.06rem;margin:.15rem 0;">Checklist táctico para seguimiento diario</h2>
         <ul>
-          <li><strong>Watchlist</strong>: separar "growth rentable" vs "growth sin caja" para evitar señales falsas.</li>
-          <li><strong>Renta fija</strong>: monitorear umbral US10Y &gt; 4,10% como posible gatillo de presión en tecnológicas.</li>
-          <li><strong>Cripto</strong>: usar niveles y no titulares; confirmar volumen antes de perseguir subas.</li>
-          <li><strong>Diversificación</strong>: sostener núcleo defensivo para amortiguar shocks de earnings.</li>
+          <li><strong>Riesgo global</strong>: monitorear petróleo y US10Y para detectar cambio de régimen.</li>
+          <li><strong>Acciones</strong>: priorizar calidad de balance y caja libre sobre narrativa.</li>
+          <li><strong>Cripto</strong>: no perseguir velas; validar volumen y contexto regulatorio.</li>
+          <li><strong>Diversificación</strong>: sostener núcleo conservador para amortiguar shocks de titulares.</li>
         </ul>
         <a class="btn" href="./tendencias-ideas.html">Ver ideas de cartera</a>
         <a class="btn" href="./radar-financiero.html" style="margin-left:6px;">Abrir radar financiero</a>
